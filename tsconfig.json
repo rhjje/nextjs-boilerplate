@@ -2,7 +2,11 @@
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     "allowJs": false,
     "baseUrl": ".",
     "skipLibCheck": true,
@@ -17,21 +21,45 @@
     "noEmit": true,
     "jsx": "preserve",
     "paths": {
-      "@/app": ["src/app"],
-      "@/pages/*": ["src/pages/*"],
-      "@/widgets/*": ["src/widgets/*"],
-      "@/features/*": ["src/features/*"],
-      "@/entities/*": ["src/entities/*"],
-      "@/model": ["src/model"],
-      "@/shared/*": ["src/shared/*"]
+      "@/app": [
+        "src/app"
+      ],
+      "@/pages/*": [
+        "src/pages/*"
+      ],
+      "@/widgets/*": [
+        "src/widgets/*"
+      ],
+      "@/features/*": [
+        "src/features/*"
+      ],
+      "@/entities/*": [
+        "src/entities/*"
+      ],
+      "@/model": [
+        "src/model"
+      ],
+      "@/shared/*": [
+        "src/shared/*"
+      ]
     },
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["src"],
+  "include": [
+    "src",
+    ".next/types/**/*.ts"
+  ],
   "references": [
     {
       "path": "./tsconfig.node.json"
     }
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }
